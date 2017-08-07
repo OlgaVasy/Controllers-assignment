@@ -1,0 +1,45 @@
+
+<html ng-app='gameModule'>
+  <head>
+    <meta charset="utf-8">
+    <title>the holy grail</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+      <script src="https://code.angularjs.org/1.5.6/angular-cookies.js"></script>
+      <script src="GameApp/app.js"></script>
+      <script src="GameApp/gameplay/clickerService.js"></script>
+      <script src="GameApp/gameplay/clickerController.js"></script>
+      <script src="GameApp/gameplay/center/centerButtonComponent.js"></script>
+      <script src="GameApp/gameplay/right/rightButtonComponent.js"></script>
+      <script src="GameApp/gameplay/left/leftButtonComponent.js"></script>
+  </head>
+  <body>
+    <div class="app" ng-controller='clickerController as gameCtrl'>
+       <div id="headline" class="header">
+       <reset-button-element reset='gameCtrl.clickerService.reset'></reset-button-element>
+      <div id="total_score">Total: {{gameCtrl.clickerService.points}}</div>
+      </div>
+      <div class="body">
+        <div class="gameContainer" >
+
+        <center-button-panel click='gameCtrl.clickerService.click' points-per-click='gameCtrl.clickerService.pointsPerClick' ></center-button-panel>
+
+        <left-button-panel
+          clicker-service='gameCtrl.clickerService'
+          cost='gameCtrl.clickerService.increasePointsPerClickCost' multiplier='gameCtrl.clickerService.multiplier'
+          multiplier-amount = 'gamectrl.clickerService.multiplierAmount'
+          ></left-button-panel>
+        <right-button-panel
+          clicker-service = 'gameCtrl.clickerService'
+          autoclicker-price = 'gameCtrl.clickerService.autoclickerPrice'
+          autoclickers = 'gameCtrl.clickerService.autoclickers'
+          use-autoclicker = 'gameCtrl.clickerService.useAutoclicker'></right-button-panel>
+      </div>
+      </div>
+      <div class="footer">
+        Made w/ &lt;3 @ FastTrack'D
+      </div>
+    </div>
+  </body>
+</html>

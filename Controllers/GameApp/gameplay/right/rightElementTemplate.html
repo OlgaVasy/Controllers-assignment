@@ -1,0 +1,11 @@
+<div class="rightElement">
+  <button ng-disabled='$ctrl.clickerService.points < $ctrl.clickerService.autoclickerPrice'
+  class="rightButton" ng-click='$ctrl.useAutoclicker()'
+  ng-class="{'disabled-button':  $ctrl.clickerService.points < $ctrl.clickerService.autoclickerPrice }"
+  >+1</button>
+  <div id="autoclicker" class="label">
+   Cost: {{$ctrl.autoclickerPrice}}</div>
+   <div id="numberClicker" class="label">
+    Autoclickers: {{$ctrl.autoclickers}}
+ </div>
+ </div>

@@ -1,0 +1,8 @@
+<div class="leftElement">
+    <button ng-disabled='$ctrl.clickerService.points < $ctrl.clickerService.increasePointsPerClickCost'
+    class="leftButton" ng-click='$ctrl.multiplier()'
+    ng-class="{'disabled-button':  $ctrl.clickerService.points < $ctrl.clickerService.increasePointsPerClickCost }" >*{{$ctrl.multiplierAmount}}</button>
+    <div id="cost" class="label">
+     Cost: {{$ctrl.cost}}
+ </div>
+</div>
